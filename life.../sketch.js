@@ -46,7 +46,7 @@ function setup() {
       ];
     }
 
-    else if (randomness == 4) {
+    else if (randomness == 5) {
       txts = [
         "I never really got the chance to--",
         "it's like you never left me"
