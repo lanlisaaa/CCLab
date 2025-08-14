@@ -15,6 +15,48 @@ function setup() {
 
   for (let x = 47; x <= 900; x += 75) {
     let y = random(100, 500);
+    let txts = [];
+    let randomness = floor(random(6)); // 0, 1, 2
+    if (randomness == 0) {
+      txts = [
+        "ARE YOU STILL MAD AT ME",
+        "i don't know who to be"
+      ];
+    }
+    else if (randomness == 1) {
+      txts = [
+        "fly above the clouds☁️",
+        "HAUNTED BY VOICES,YOURS OR MINE?"
+      ];
+    }
+
+    else if (randomness == 2) {
+      txts = [
+        "go back to school",
+        " the osmanthus flowers are blooming again..."
+      ];
+    }
+
+    else if (randomness == 3) {
+      txts = [
+        "none of really know until we...",
+        "Have you ever regretted giving birth to me?"
+      ];
+    }
+
+    else if (randomness == 4) {
+      txts = [
+        "🦋dAnCe wiTh the wInD🦋",
+        "what does it feel like to decay?"
+      ];
+    }
+    else if (randomness == 5) {
+      txts = [
+        "I'm free",
+        "I should let go, shouldn't I?..."
+      ];
+    }
+    balls.push(new Ball(x, y, random(5, 45), txts));
   }
 }
 
