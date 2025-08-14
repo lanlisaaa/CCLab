@@ -13,66 +13,44 @@ function setup() {
 
   lifeline = new LifeLine();
 
-  for (let x = 47; x <= 900; x += 50) {
+  for (let x = 47; x <= 900; x += 75) {
     let y = random(100, 500);
     let txts = [];
-    let randomness = floor(random(10)); // 0, 1, 2
+    let randomness = floor(random(6)); // 0, 1, 2
     if (randomness == 0) {
       txts = [
-        "I'm sorry I couldn't be there",
-        "Does life after death really exists?",
-      ];
-    } else if (randomness == 1) {
-      txts = [
         "ARE YOU STILL MAD AT ME",
-        "the osmanthus flowers are blooming again..."
-      ];
-    } else if (randomness == 2) {
-      txts = [
-        "none of really do until we...",
         "i don't know who to be"
       ];
     }
-    else if (randomness == 3) {
+    else if (randomness == 1) {
       txts = [
-        "even after we...",
+        "fly above the clouds☁️",
         "HAUNTED BY VOICES,YOURS OR MINE?"
       ];
     }
-    else if (randomness == 4) {
+
+    else if (randomness == 2) {
       txts = [
-        "it's okay to not have it all figured out right?",
-        "did it hurt?"
+        "go back to school",
+        " the osmanthus flowers are blooming again..."
       ];
     }
 
-    else if (randomness == 5) {
+    else if (randomness == 3) {
       txts = [
-        "I never really got the chance to--",
-        "it's like you never left me"
-      ];
-    }
-    else if (randomness == 6) {
-      txts = [
-        "I want to go back to college to get a master's degree",
-        "Could you tell me how to cook rice cakes...again?"
-      ];
-    }
-
-    else if (randomness == 7) {
-      txts = [
-        "I want to fly above the clouds☁️",
-        "Can you forgive me?"
-      ];
-    }
-
-    else if (randomness == 8) {
-      txts = [
-        "🦋Look, I'm dAnCing wiTh the wInD🦋",
+        "none of really know until we...",
         "Have you ever regretted giving birth to me?"
       ];
     }
-    else if (randomness == 9) {
+
+    else if (randomness == 4) {
+      txts = [
+        "🦋dAnCe wiTh the wInD🦋",
+        "what does it feel like to decay?"
+      ];
+    }
+    else if (randomness == 5) {
       txts = [
         "I'm free",
         "I should let go, shouldn't I?..."
@@ -260,9 +238,8 @@ class Ball {
     stroke(255)
     fill(this.r, this.g, this.b);
     circle(0, 0, this.rad * 2); // *** diameter
-    noFill()
-    stroke(120)
-    strokeWeight(0.5)
+    noStroke()
+    textSize(15)
     this.displayText(60, 0);
     pop()
     push()

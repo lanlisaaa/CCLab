@@ -1,10 +1,12 @@
-let lifeline;
+
+}
+let lifeline
 let balls = []
 let img1
-let sound1
+let sound
 function preload() {
-  img1 = loadImage("assets/nightBridge.jpeg");
-  sound1 = loadSound("assets/heartbeat.mp3")
+  img1 = loadImage("assets/nightBridge1.jpeg");
+  sound = loadSound("assets/heartbeat1.mp3")
 }
 
 function setup() {
@@ -13,33 +15,40 @@ function setup() {
 
   lifeline = new LifeLine();
 
-  for (let x = 47; x <= 900; x += 100) {
-    let y = random(100, 500);
-    let sentences = [];
-    let randomness = floor(random(3)); // 0, 1, 2
-    if (randomness == 0) {
-      sentences = [
-        "hello",
-        "Hi",
-        ":D",
-      ];
-    } else if (randomness == 1) {
-      sentences = [
-        "a",
-        "b",
-        "c",
-      ];
-    } else if (randomness == 2) {
-      sentences = [
-        "5",
-        "6",
-        "7",
-      ];
+
+  function setup() {
+    let canvas = createCanvas(1000, 600);
+    canvas.parent("p5-canvas-container");
+
+    lifeline = new LifeLine();
+
+    for (let x = 47; x <= 900; x += 100) {
+      let y = random(100, 500);
+      let sentences = [];
+      let randomness = floor(random(3)); // 0, 1, 2
+      if (randomness == 0) {
+        sentences = [
+          "hello",
+          "Hi",
+          ":D",
+        ];
+      } else if (randomness == 1) {
+        sentences = [
+          "a",
+          "b",
+          "c",
+        ];
+      } else if (randomness == 2) {
+        sentences = [
+          "5",
+          "6",
+          "7",
+        ];
+      }
+
+      balls.push(new Ball(x, y, random(5, 35), sentences));
     }
-
-    balls.push(new Ball(x, y, random(5, 35), sentences));
   }
-
 }
 
 
