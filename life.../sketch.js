@@ -256,7 +256,7 @@ class Ball {
       text(txt, txtX, txtY);
       pop()
     }
-    if (frameCount > 630) {
+    if (frameCount > 650) {
       sound.stop()
     }
   }
