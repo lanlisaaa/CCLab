@@ -214,7 +214,7 @@ class Ball {
     else {
       this.r = 50
       this.g = 50
-      this.b = 50
+
       // out
       // white
 
