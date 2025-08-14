@@ -239,7 +239,7 @@ class Ball {
     rotate(sin(frameCount * 0.5))
     tint(this.r, this.g * 0.2, 0)
     scale(0.5)
-    image(img2, 0, 0, this.rad * 2, this.rad * 2);
+
     pop()
     push()
     translate(this.x, this.y);
