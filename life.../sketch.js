@@ -130,12 +130,6 @@ class LifeLine {
     fill(0, 225, 225)
     this.drawLine2()
     pop()
-    push()
-    stroke(255)
-    text("I've been waiting for you all this time", width - 300, height / 3 - 80)
-    text("Before you arrive at your final destination...", width - 300, 240)
-    text("Do you want to take one last look at your past?", width - 300, 390)
-    pop()
   }
 
 
