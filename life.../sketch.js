@@ -1,9 +1,11 @@
 let lifeline
 let balls = []
 let img1
+let img2
 let sound
 function preload() {
   img1 = loadImage("assets/nightBridge1.jpeg");
+  img2 = loadImage("assets/flowers1.jpeg")
   sound = loadSound("assets/heartbeat1.mp3")
 }
 
@@ -229,10 +231,18 @@ class Ball {
 
     push();
     translate(this.x, this.y);
-    stroke(255)
-    fill(this.r, this.g, this.b);
-    circle(0, 0, this.rad * 2); // *** diameter
     noStroke()
+    // *** diameter
+
+    imageMode(CENTER);
+    rotate(sin(frameCount * 0.5))
+    tint(this.r, this.g * 0.2, 0)
+    scale(0.5)
+    image(img2, 0, 0, this.rad * 2, this.rad * 2);
+    pop()
+    push()
+    translate(this.x, this.y);
+    fill(this.r, this.g, this.b)
     textSize(15)
     this.displayText(60, 0);
     pop()
