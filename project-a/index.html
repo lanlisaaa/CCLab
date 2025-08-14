@@ -1,0 +1,107 @@
+<!-- 
+Template for IMA's Creative Coding Lab 
+
+Project A: Generative Creatures
+CCLaboratories Biodiversity Atlas 
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>[Melragia Neurotia]</title>
+
+    <!-- allow special characters, including Arabic, Chinese, Korean, Japanese, etc. -->
+    <meta charset="UTF-8">
+    <!-- link the style sheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- import p5.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.min.js"></script>
+    <script>
+        // prevent scrolling when spacebar and arrow keys are pressed.
+        window.addEventListener("keydown", function (e) { if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) { e.preventDefault(); } }, false);
+    </script>
+</head>
+
+<body>
+    <!-- title -->
+    <div id="title-wrapper">
+        <h1 class="headline black">[ Melragia Neurotia ]</h1>
+    </div>
+
+    <!-- main content -->
+    <div id="main-wrapper">
+        <div id="p5-canvas-container">
+            <!-- This is where your p5 sketch will be appended and appear! -->
+        </div>
+        <div class="two-columns">
+            <div class="left">
+                <h3 class="red">Scientific Name:</h3>
+                <p>Melragia Neurotia</p>
+
+                <h3 class="red">Discovered by / at:</h3>
+                <p>
+                    Lan at 12am July 17 while observing an actor standing in front of a mirror having self-doubts</p>
+
+                <h3 class="green">Family:</h3>
+                <p>Interneurons</p>
+            </div>
+            <div class="right">
+                <h3 class="green">Habitat:</h3>
+                <p>
+                    Found most commonly in human brain when the individual is under pressure and experience strong
+                    negative emotions
+                </p>
+
+                <h3 class="green">Appearance:</h3>
+                <p>
+                    A round cell with a nucleus that changes color as it goes through different emotions.
+                    She sends magenta electric signals to all parts of the cell
+                    and spits purple teeth for self-defense purposes when pressure is applied.
+                </p>
+
+                <h3 class="green">Key Characteristics:</h3>
+                <ul>
+                    <li>She calls out for help every time she detects that the individual is under pressure. </li>
+                    <li>If her alert is left unattended, her help signals would form a huge net to trap her.</li>
+                    <li>She sends magenta electric signals to all parts of the cell
+                        and spits purple spikes for self-defense purposes when pressure is applied.
+                    </li>
+                    <li>When she changes color depending on her mood. She turns red when she is enraged.
+                        She turns blue. If she’s experiencing a mixed feelings of these two emotions,
+                        the colors would combine itself.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="one-column">
+            <p>
+                <span class="yellow">What we know so far about [Melragia Neurotia]?</span>
+                The purpose of her existence is to remind people to take care of their mental health.
+                She appears when individuals are under pressure or experience a traumatic event, and hates being
+                ignored.
+                Many people’s first reaction is to repress her every time she appears. However,
+                the more you try to repress her the more frantic she gets.
+                <br>
+                <span class="yellow">Guidelines for human interaction with this creature</span>
+                You can change the color of Melragia by moving your mouse.
+                If you want to press down the feeling of grief or anger, you can press your mouse.
+
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer" class="black">
+        <p>A CCLab project made by [Lan] in [Summer 2025]</p>
+    </div>
+
+    <!-- Home: Link back to the ATLAS page-->
+    <div id="home">
+        <a href="https://cclab.work/atlas">Back to the ATLAS</a>
+    </div>
+
+    <!-- Include your sketch.js file here -->
+    <script src="sketch.js" type="text/javascript"> </script>
+</body>
+
+</html>
